@@ -1,0 +1,68 @@
+const clothingProducts = [
+    {
+      id: 1,
+      name: "Men's Casual Shirt",
+      brand: "Brand X",
+      price: 1499,
+      discountPrice: 1299,
+      image: "https://via.placeholder.com/300x300?text=Men's+Casual+Shirt",
+    },
+    {
+      id: 2,
+      name: "Women's Summer Dress",
+      brand: "Brand Y",
+      price: 2499,
+      discountPrice: 1999,
+      image: "https://via.placeholder.com/300x300?text=Women's+Summer+Dress",
+    },
+    {
+      id: 3,
+      name: "Men's Denim Jeans",
+      brand: "Brand Z",
+      price: 1999,
+      discountPrice: 1799,
+      image: "https://via.placeholder.com/300x300?text=Men's+Denim+Jeans",
+    },
+    {
+      id: 4,
+      name: "Women's Cardigan",
+      brand: "Brand A",
+      price: 2999,
+      discountPrice: 2499,
+      image: "https://via.placeholder.com/300x300?text=Women's+Cardigan",
+    },
+    {
+      id: 5,
+      name: "Men's Hoodie",
+      brand: "Brand B",
+      price: 1999,
+      discountPrice: 1699,
+      image: "https://via.placeholder.com/300x300?text=Men's+Hoodie",
+    },
+    {
+      id: 6,
+      name: "Women's Blouse",
+      brand: "Brand C",
+      price: 1499,
+      discountPrice: 1299,
+      image: "https://via.placeholder.com/300x300?text=Women's+Blouse",
+    },
+    {
+      id: 7,
+      name: "Men's Formal Trousers",
+      brand: "Brand D",
+      price: 2499,
+      discountPrice: 2199,
+      image: "https://via.placeholder.com/300x300?text=Men's+Formal+Trousers",
+    },
+    {
+      id: 8,
+      name: "Women's Maxi Skirt",
+      brand: "Brand E",
+      price: 1999,
+      discountPrice: 1799,
+      image: "https://via.placeholder.com/300x300?text=Women's+Maxi+Skirt",
+    },
+  ];
+  
+  export default clothingProducts;
