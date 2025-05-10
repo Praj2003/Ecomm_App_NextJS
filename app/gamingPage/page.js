@@ -1,5 +1,5 @@
 import React from "react";
-import clothingProducts from "../ClothingData";
+import gamingProducts from "../GamingData";
 import ElectronicFeature from "../components/ElectronicFeature";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ const ClothingPage = () => {
     <div className="min-w-full min-h-screen">
       <div className=" relative min-w-full min-h-[80vh] ">
         <Image
-          src="/images/ClothingH.jpg"
+          src="/images/gamingHero.jpg"
           alt="Electronics Banner"
           fill={true}
           className="object-cover"
@@ -18,7 +18,7 @@ const ClothingPage = () => {
 
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-5xl font-bold text-center px-4">
-            Fashion Meets Functionality
+            Unleash Your Gaming Potential
           </h1>
         </div>
       </div>
@@ -37,7 +37,7 @@ const ClothingPage = () => {
 
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-10 place-items-center mb-7">
           {/* Add your clothing products here */}
-          {clothingProducts.map((product) => (
+          {gamingProducts.map((product) => (
             <ElectronicFeature key={product.id} props={product} />
           ))}
         </div>

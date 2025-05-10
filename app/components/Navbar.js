@@ -24,7 +24,7 @@ const Navbar = () => {
           ></Image>
         </div>
         <Link href={"/"}>
-          <button className="text-xl font-bold">Shopify</button>
+          <button className="text-xl font-bold">BuyNest</button>
         </Link>
       </div>
 

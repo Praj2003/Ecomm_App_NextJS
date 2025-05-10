@@ -1,13 +1,51 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ElectronicFeature = ({ props }) => {
   const [clicked, setClicked] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [cartItems, setCartItems] = useState([{}]);
+  const isItemPresent = cartItems.some(
+    (item) => item.name === props.name && item.brand === props.brand
+  );
+
+  useEffect(() => {
+    async function fetchCartItems() {
+      try {
+        const response = await fetch("/api/CartRoute", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch cart items");
+        }
+
+        const data = await response.json();
+        setCartItems(data.data); // Update state with fetched cart items
+        console.log(data.data);
+        setIsLoading(false); // Stop loading
+      } catch (error) {
+        console.error("Error fetching cart items:", error);
+        setIsLoading(false); // Stop loading even if there's an error
+      }
+    }
+
+    
+    fetchCartItems();
+  }, []); // Empty dependency array ensures this runs only once on mount
+
+  useEffect(() => {
+    console.log("Updated cart items:", cartItems);
+  }, [cartItems]);
+
 
   async function handleDelete() {
     try {
+      setIsLoading(true);
       setClicked((prev) => !prev);
 
       const newData = {
@@ -26,8 +64,19 @@ const ElectronicFeature = ({ props }) => {
 
       const result = await response.json();
       console.log(result);
+      setCartItems((prev) =>
+        prev.filter(
+          (item) => item.name !== props.name && item.brand !== props.brand
+        )
+      );
+      window.location.reload();
+      setIsLoading(false);
+      console.log("Item deleted successfully");
+      console.log(cartItems);
+      
     } catch (err) {
       console.log(err);
+
     }
   }
   async function handleClick() {
@@ -51,6 +100,7 @@ const ElectronicFeature = ({ props }) => {
 
       const result = await response.json();
       console.log(result);
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -78,20 +128,13 @@ const ElectronicFeature = ({ props }) => {
         </div>
 
         <div className="w-full flex justify-end items-center gap-3 mt-7">
-          <input
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-            className="w-16 text-center border border-gray-300 rounded-lg px-2 py-1 text-sm focus:ring-2 focus:ring-purple-500"
-          />
 
           <button
-            onClick={clicked ? handleDelete : handleClick}
+            onClick={isItemPresent ? handleDelete : handleClick}
             type="button"
             className="mr-3 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           >
-            {clicked ? (
+            {isItemPresent ? (
               <p className="text-white text-sm font-semibold">
                 Remove From Cart
               </p>

@@ -64,24 +64,26 @@ export default function Home() {
         >
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="w-[120] h-[120] bg-white rounded-full border border-black relative  cursor-pointer">
-              <Image
-                fill={true}
-                src={"/images/clothing.jpg"}
-                className="absolute rounded-full"
-                alt="no image"
-              ></Image>
+              <Link href={"/clothingPage"}>
+                <Image
+                  fill={true}
+                  src={"/images/clothing.jpg"}
+                  className="absolute rounded-full"
+                  alt="no image"
+                ></Image>
+              </Link>
             </div>
 
             <h2 className="text-lg font-bold text-black ">Clothing</h2>
           </div>
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="w-[120] h-[120] bg-white rounded-full border border-black relative cursor-pointer">
-              <Image
+              <Link href={"/gamingPage"}><Image
                 fill={true}
                 src={"/images/gaming.jpg"}
                 className="absolute rounded-full"
                 alt="no image"
-              ></Image>
+              ></Image></Link>
             </div>
 
             <h2 className="text-lg font-bold text-black ">Gaming</h2>

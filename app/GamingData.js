@@ -1,0 +1,68 @@
+const gamingProducts = [
+    {
+      id: 1,
+      name: "Gaming Laptop",
+      brand: "Brand X",
+      price: 99999,
+      discountPrice: 89999,
+      image: "https://via.placeholder.com/300x300?text=Gaming+Laptop",
+    },
+    {
+      id: 2,
+      name: "Gaming Mouse",
+      brand: "Brand Y",
+      price: 2999,
+      discountPrice: 2499,
+      image: "https://via.placeholder.com/300x300?text=Gaming+Mouse",
+    },
+    {
+      id: 3,
+      name: "Mechanical Keyboard",
+      brand: "Brand Z",
+      price: 4999,
+      discountPrice: 4499,
+      image: "https://via.placeholder.com/300x300?text=Mechanical+Keyboard",
+    },
+    {
+      id: 4,
+      name: "Gaming Headset",
+      brand: "Brand A",
+      price: 7999,
+      discountPrice: 6999,
+      image: "https://via.placeholder.com/300x300?text=Gaming+Headset",
+    },
+    {
+      id: 5,
+      name: "Gaming Monitor",
+      brand: "Brand B",
+      price: 19999,
+      discountPrice: 17999,
+      image: "https://via.placeholder.com/300x300?text=Gaming+Monitor",
+    },
+    {
+      id: 6,
+      name: "Graphics Card",
+      brand: "Brand C",
+      price: 49999,
+      discountPrice: 44999,
+      image: "https://via.placeholder.com/300x300?text=Graphics+Card",
+    },
+    {
+      id: 7,
+      name: "Gaming Chair",
+      brand: "Brand D",
+      price: 14999,
+      discountPrice: 12999,
+      image: "https://via.placeholder.com/300x300?text=Gaming+Chair",
+    },
+    {
+      id: 8,
+      name: "VR Headset",
+      brand: "Brand E",
+      price: 29999,
+      discountPrice: 26999,
+      image: "https://via.placeholder.com/300x300?text=VR+Headset",
+    },
+  ];
+  
+  export default gamingProducts;
