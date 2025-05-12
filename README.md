@@ -1,25 +1,29 @@
-## Screenshots of the Project
+# Screenshots of the Project
 
-# Home Page
+## Home Page
 
 <img width="1440" alt="Screenshot 2025-05-12 at 3 58 56 PM" src="https://github.com/user-attachments/assets/851e03a8-7285-4587-8e55-2c5ba50558cc" />
 
-# Category Section
+## Category Section
 <img width="1440" alt="Screenshot 2025-05-12 at 3 59 11 PM" src="https://github.com/user-attachments/assets/fea735f2-91ab-4d90-978b-2af4d6712e4b" />
 
-# Product View Page
+## Product View Page
 
 <img width="1440" alt="Screenshot 2025-04-30 at 7 33 39 AM" src="https://github.com/user-attachments/assets/c4ef9390-ff0a-4a6c-bb1c-53e1ad53e636" />
 
-# Cart and Payment Page
+## Cart and Payment Page
 
 <img width="1440" alt="Screenshot 2025-04-30 at 7 32 58 AM" src="https://github.com/user-attachments/assets/3d030861-c0f1-422e-be7c-e0a77dda18ac" />
+
+## MongoDB Database for Storing Product Items
+<img width="1019" alt="Screenshot 2025-05-12 at 4 06 15 PM" src="https://github.com/user-attachments/assets/7ffc6ab1-39c3-419d-afd5-80c8c4207f96" />
+
 
 <br></br>
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Getting Started
 
 First, run the development server:
 
